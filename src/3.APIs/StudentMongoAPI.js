@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import cors from "cors"
 
 import { Student } from "./models/StudentMongo.js";
 
@@ -8,6 +9,7 @@ const app = express()
 const router = express.Router()
 dotenv.config()
 app.use(express.json())
+app.use(cors())
 
 // mongoose.connect("mongodb://localhost:27017/studentdb", function(err){
 //     if(err){
