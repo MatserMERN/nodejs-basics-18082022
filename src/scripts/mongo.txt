@@ -1,0 +1,19 @@
+Read Data
+---------
+db.student.find()
+db.student.find().pretty()
+
+Insert Data
+-----------
+db.student.insert({name: "Uma", email: "uma@ef.com",city: "Hyderabad"})
+
+Update Data
+-----------
+db.student.update({_id:  ObjectId("6306ff0b9700b553b410129d")}, 
+                  {$set: {name: "Scott Desatnick",
+                          email: "scott.desatnick@ef.com",
+                          city: "Boston"}})
+
+Delete Data
+------------
+db.student.remove({_id: ObjectId("630703d7accbc390596f5853")})
