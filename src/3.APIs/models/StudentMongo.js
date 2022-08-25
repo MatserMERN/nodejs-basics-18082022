@@ -15,6 +15,6 @@ const studentSchema = new Schema({
         type: String,
         required: true
     }
-})
-
+}, {versionKey: false})
+// {versionKey: "docVersion"} - You can change version key name
 export const Student = mongoose.model("student", studentSchema, "student")
