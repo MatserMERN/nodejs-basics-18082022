@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app
+  labels:
+    app: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      name: node-pod 
+    spec:
+      containers:
+        - name: node-app
+          image: gcr.io/gcp-training-377619/node-mongo-app:apps/v1
+          ports:
+            - name: web
+            - containerPort: 4200
+            
