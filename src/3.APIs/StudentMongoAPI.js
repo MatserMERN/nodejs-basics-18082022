@@ -27,6 +27,10 @@ router.get("/", function (req, res) {
     res.json("Welcome to Student Mongo API")
 })
 
+router.get("/health", function (req, res) {
+    res.json("Server is up and running !!!")
+})
+
 router.get("/students", async (req, res) => {
     const students = await Student.find().catch(err => console.log(err))
     res.json(students)
